@@ -19,9 +19,9 @@ Adds simple notes to post, page and custom post type edit screen.
 *   English (author)
 *   Polish (Kuba Mikita - [Sztuka WordPress](http://www.wpart.pl/ "Sztuka WordPress"))
 
-Cover photo [designed by Freepik](http://www.freepik.com)
-
 Want to use this plugin in your language? Send me your translation and get your website link here!
+
+Cover photo [designed by Freepik](http://www.freepik.com)
 
 == Installation ==
 
