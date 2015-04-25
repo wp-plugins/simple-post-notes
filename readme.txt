@@ -2,7 +2,7 @@
 Contributors: Kubitomakita
 Tags: post, page, custom post type, cpt, note, notes, informations, info
 Requires at least: 3.6
-Tested up to: 4.1.1
+Tested up to: 4.2
 Stable tag: 1.1.0
 
 Adds simple notes to post, page and custom post type edit screen.
