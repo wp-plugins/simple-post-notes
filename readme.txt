@@ -3,7 +3,7 @@ Contributors: Kubitomakita
 Tags: post, page, custom post type, cpt, note, notes, informations, info
 Requires at least: 3.6
 Tested up to: 4.2
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 
 Adds simple notes to post, page and custom post type edit screen.
 
@@ -38,6 +38,18 @@ Don't download .zip file - is silly when you can search for this plugin in your 
 
 Yes! Enable them on the plugin settings screen.
 
+= Can I disable display of admin column? =
+
+Yes, by a simple filter.
+
+Use:
+`add_filter( 'spn/columns-display', '__return_false' );`
+To disable SPN column for all post types
+
+Or use
+`add_filter( 'spn/columns-display/POST_TYPE_SLUG', '__return_false' );`
+To disable SPN column only for specific post type
+
 == Screenshots ==
 
 1. Post Note area
@@ -45,6 +57,9 @@ Yes! Enable them on the plugin settings screen.
 3. Settings
 
 == Changelog ==
+
+= 1.2.0 =
+* Added filter to prevent displaying post note column
 
 = 1.1.0 =
 * Added Note to admin column

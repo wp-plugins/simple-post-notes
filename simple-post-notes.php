@@ -4,7 +4,7 @@ Plugin Name: Simple Post Notes
 Description: Adds simple notes to post, pagem and custom post type edit screen.
 Author: Kuba Mikita
 Author URI: http://www.wpart.pl
-Version: 1.1.0
+Version: 1.2.0
 License: GPL2
 Text Domain: spnotes
 */
@@ -73,7 +73,9 @@ class SPNotes {
 
 		add_action( 'save_post', array( $this, 'save_note' ) );
 
-		$this->add_column_filters();
+		if ( apply_filters( 'spn/columns-display', true ) ) {
+			$this->add_column_filters();
+		}
 
 	}
 
@@ -119,17 +121,17 @@ class SPNotes {
 
 		foreach ( $this->settings['post_types'] as $post_type ) {
 
-			if ( $post_type == 'post' ) {
+			if ( $post_type == 'post' && apply_filters( 'spn/columns-display/post', true ) ) {
 
 				add_filter( 'manage_posts_columns', array( $this, 'add_column' ) );
 				add_action( 'manage_posts_custom_column', array( $this, 'output_column' ), 10, 2 );
 
-			} else if ( $post_type == 'page' ) {
+			} else if ( $post_type == 'page' && apply_filters( 'spn/columns-display/page', true ) ) {
 
 				add_filter( 'manage_pages_columns', array( $this, 'add_column' ) );
 				add_action( 'manage_pages_custom_column', array( $this, 'output_column' ), 10, 2 );
 
-			} else {
+			} else if ( apply_filters( 'spn/columns-display/' . $post_type, true ) ) {
 
 				add_filter( 'manage_' . $post_type . '_posts_columns', array( $this, 'add_column' ) );
 				add_action( 'manage_' . $post_type . '_posts_custom_column', array( $this, 'output_column' ), 10, 2 );
