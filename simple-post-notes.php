@@ -4,7 +4,7 @@ Plugin Name: Simple Post Notes
 Description: Adds simple notes to post, pagem and custom post type edit screen.
 Author: Kuba Mikita
 Author URI: http://www.wpart.pl
-Version: 1.2.0
+Version: 1.2.1
 License: GPL2
 Text Domain: spnotes
 */
@@ -67,15 +67,13 @@ class SPNotes {
 		add_action( 'admin_menu', array( $this, 'register_page' ), 8, 0 );
 		add_action( 'admin_init', array( $this, 'register_settings' ), 10, 0 );
 
+		add_action( 'admin_init', array( $this, 'add_columns' ), 10, 0 );
+
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts_and_styles' ), 10 , 1 );
 
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ) );
 
 		add_action( 'save_post', array( $this, 'save_note' ) );
-
-		if ( apply_filters( 'spn/columns-display', true ) ) {
-			$this->add_column_filters();
-		}
 
 	}
 
@@ -112,9 +110,17 @@ class SPNotes {
 	}
 
 	/**
-	 * Adds column filters for posts table
+	 * Adds columns
 	 * @return  void
 	 */
+	public function add_columns() {
+
+		if ( apply_filters( 'spn/columns-display', true ) ) {
+			$this->add_column_filters();
+		}
+
+	}
+
 	public function add_column_filters() {
 
 		$this->settings = get_option( 'spnotes_settings' );

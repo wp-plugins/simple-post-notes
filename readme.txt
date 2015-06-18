@@ -3,7 +3,7 @@ Contributors: Kubitomakita
 Tags: post, page, custom post type, cpt, note, notes, informations, info
 Requires at least: 3.6
 Tested up to: 4.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 
 Adds simple notes to post, page and custom post type edit screen.
 
@@ -58,7 +58,7 @@ To disable SPN column only for specific post type
 
 == Changelog ==
 
-= 1.2.0 =
+= 1.2.1 =
 * Added filter to prevent displaying post note column
 
 = 1.1.0 =
