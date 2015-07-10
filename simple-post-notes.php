@@ -4,7 +4,7 @@ Plugin Name: Simple Post Notes
 Description: Adds simple notes to post, pagem and custom post type edit screen.
 Author: Kuba Mikita
 Author URI: http://www.wpart.pl
-Version: 1.2.1
+Version: 1.2.2
 License: GPL2
 Text Domain: spnotes
 */

@@ -3,7 +3,7 @@ Contributors: Kubitomakita
 Tags: post, page, custom post type, cpt, note, notes, informations, info
 Requires at least: 3.6
 Tested up to: 4.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 Adds simple notes to post, page and custom post type edit screen.
 
@@ -18,6 +18,7 @@ Adds simple notes to post, page and custom post type edit screen.
 
 *   English (author)
 *   Polish (Kuba Mikita - [Sztuka WordPress](http://www.wpart.pl/ "Sztuka WordPress"))
+*   Spanish (Alfonso Frachelle - [idearius](http://www.idearius.com/es/ "idearius"))
 
 Want to use this plugin in your language? Send me your translation and get your website link here!
 
@@ -57,6 +58,9 @@ To disable SPN column only for specific post type
 3. Settings
 
 == Changelog ==
+
+= 1.2.2 =
+* Added Spanish translation thanks to Alfonso Frachelle 
 
 = 1.2.1 =
 * Added filter to prevent displaying post note column
